@@ -1,13 +1,8 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class SeasonOfYear {
-    enum Season {
-        WINTER,
-        SPRING,
-        SUMMER,
-        AUTUMN
-    }
-
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Please enter current Month:");
@@ -39,9 +34,13 @@ public class SeasonOfYear {
             season = Season.AUTUMN;
             System.out.println("Current Season is:" + season);
             break;
-            default:
-                System.out.println("No such Month");
+        default:
+            System.out.println("No such Month");
         }
 
+    }
+
+    enum Season {
+        WINTER, SPRING, SUMMER, AUTUMN
     }
 }
